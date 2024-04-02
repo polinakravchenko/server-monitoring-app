@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myserver.server_name }}
+{% endblock %}
+
+
+{% block content %}
+<h1>{{myserver.server_name}}</h1>
+  
+<p>Time Notification: {{myserver.time_notification}}</p>
+<p>E-mail address: {{myserver.email_address}}</p>
+<p>Server localization: {{myserver.server_localization}}</p>
+
+<p>Back to <a href="/servers">Servers</a></p>
+{% endblock %}

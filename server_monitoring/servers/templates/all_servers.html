@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+  List of all servers
+{% endblock %}
+  
+{% block content %}
+<h1>Available Servers</h1>
+     
+<ul>
+  {% for x in myservers %}
+    <li><a href="details/{{x.id}}">{{x.server_name }} {{ x.time_notification }} {{x.server_localization}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
